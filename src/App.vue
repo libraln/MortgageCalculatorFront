@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <router-view />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+/* eslint-disable */
+import BankManagement from "./components/BankManagement.vue";
+import BankCreation from "./components/BankCreation.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    BankManagement,
+    BankCreation,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main-title {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.button-dark {
+  background-color: #464646;
+  color: white;
+}
+.button-dark:hover {
+  color: lightgrey;
 }
 </style>
+
+
